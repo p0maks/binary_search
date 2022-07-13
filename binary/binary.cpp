@@ -24,7 +24,26 @@ int BinarySearch(int A[], int key)
 void main()
 {
 	setlocale(LC_ALL, "Rus");
-	
-	system("pause");
+	int i, key;
+	int A[N];
+;
+	cout << "Исходный массив: ";
+	for (i = 0; i < N; i++)
+	{
+		A[i] = N * i; 
+		cout << A[i] << " ";
+	}
+	cout << endl;
+	cout << "Искомый элемент > ";
+	cin >> key;
+	if (BinarySearch(A, key) == -1){
+		cout << "\nЭлемент не найден";
+			cout << endl;
+	}
+	else {
+		cout << "\nНомер элемента: " << BinarySearch(A, key) + 1;
+		cout << endl;
+	}
+		system("pause");
 }
 
